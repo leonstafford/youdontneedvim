@@ -14,8 +14,6 @@ I love Vim, but not everyone has 8MB RAM free to edit a simple text file, especi
 
 ed(1) has been around since 1969 - when computing resources were tight and efficient editing was essential. 
 
-[A
-
 Many of us have access to powerful computers and internet that allows for walls of text to be quickly loaded onto the screen. ed(1) can run on the slowest of remote connections and consume minimal system resources. 
 
 I'd like to be able to work quickly on any system, including low-spec hardware and poor internet connections.
