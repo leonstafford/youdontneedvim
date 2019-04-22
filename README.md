@@ -68,3 +68,22 @@ These kind of change inside, change around commands are something I use a lot of
 
 These examples both work well when there is only one instance of quoted text on the current line. When there are multiple instances on the same line, using the example Vim command will edit just the first instance. Using the ed command will have undesired effects and require more thought into the matching pattern if you want to edit just the first instance.
 
+
+### Jump to end of function definition
+
+#### Vim
+
+ - `/function foo`
+ - `Return`
+ - `$%`
+
+#### ed
+
+ - `/function foo`
+ - `Return`
+ - `;/^    }`
+ - `Return`
+
+This version in `ed(1)` needs some improvement. It currently requires that you know the number of spaces/tabs your closing curly brace will be on. This should give me a good start on figuring out how to print/cut/indent whole function definitions.
+
+
