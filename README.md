@@ -51,3 +51,20 @@ Assuming you have line numbers showing already, else, turn them on with `:set nu
 
 Defaults to range of `(1,$)` (all lines), `g` applies the given commands each line matching the regular expression. From `man ed`: `(1,$)g/re/command-list`. What makes you smile: `g/re/p` to print matches! Is it a conspiracy, or is `ed(1)` the Illuminati of all UNIX commands?!?
 
+### Change text inside quotes
+
+These kind of change inside, change around commands are something I use a lot of in Vim for web development, support for change inside tags, especially.
+
+#### Vim
+
+ - `ci"`
+ - `the new text`
+ - `Esc`
+
+#### ed
+
+ - `,s/".*"/"the new text"/`
+ - `Return`
+
+These examples both work well when there is only one instance of quoted text on the current line. When there are multiple instances on the same line, using the example Vim command will edit just the first instance. Using the ed command will have undesired effects and require more thought into the matching pattern if you want to edit just the first instance.
+
