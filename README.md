@@ -34,3 +34,20 @@ A test you can easily do in `sed` or other tools, but if you're already in your 
  - `1,$s/foo/bar/g`
 
 For lines number 1, through last line (`$`), substitute (`s`) all occurrances (`g`) of `foo` with `bar`.
+
+### Print all function names with line numbers
+
+Useful for files with (probably too) many functions. While a bloated IDE may steal your pixels with a permanent preview of the file structure, how often do you use it?
+
+#### Vim
+
+ - `:g/function /p`
+
+Assuming you have line numbers showing already, else, turn them on with `:set nu`.
+
+#### ed
+
+ - `g/function /n`
+
+Defaults to range of `(1,$)` (all lines), `g` applies the given commands each line matching the regular expression. From `man ed`: `(1,$)g/re/command-list`. What makes you smile: `g/re/p` to print matches! Is it a conspiracy, or is `ed(1)` the Illuminati of all UNIX commands?!?
+
