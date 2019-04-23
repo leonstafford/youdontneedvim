@@ -86,4 +86,19 @@ These examples both work well when there is only one instance of quoted text on 
 
 This version in `ed(1)` needs some improvement. It currently requires that you know the number of spaces/tabs your closing curly brace will be on. This should give me a good start on figuring out how to print/cut/indent whole function definitions.
 
+### Print a whole function definition
+
+#### Vim
+
+ - TBC
+
+#### ed
+
+ - `g/function foo/ka`
+ - `Return`
+ - `;/^    }`
+ - `Return`
+ - `'a,.n`
+
+Expecting only one match for our function definition, we can use a global search, which will return the line number, as opposed to just a search with `/`. We mark this as position `a` with the `k` command, for later use. We then find the end of the function definition. Now, we can print from the start of the function, marked with `a`, through the end (our current line, `.`).
 
