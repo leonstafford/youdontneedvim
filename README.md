@@ -102,3 +102,9 @@ This version in `ed(1)` needs some improvement. It currently requires that you k
 
 Expecting only one match for our function definition, we can use a global search, which will return the line number, as opposed to just a search with `/`. We mark this as position `a` with the `k` command, for later use. We then find the end of the function definition. Now, we can print from the start of the function, marked with `a`, through the end (our current line, `.`).
 
+## Further (ed)ucation
+
+ - `man ed`
+ - Read the source code. If you've checkout out the AnonCVS repo for OpenBSD (you are using OpenBSD, right?), simply `ed /usr/src/bin/ed/main.c` and see what the `-x` flag used to do!
+ - Get Michael W Lucas' [Ed Mastery](https://mwl.io/nonfiction/tools) book. The best (and only?) book on `ed(1)`. It costs less than the patience required to edit large files in `ed(1)`.
+
